@@ -1,0 +1,11 @@
+{
+  "name": "toad-sings",
+  "version": "1.0.0",
+  "description": "toad sings",
+  "main": "src/index.js",
+  "author": "aetheryx",
+  "license": "MIT",
+  "dependencies": {
+    "eris": "*"
+  }
+}
