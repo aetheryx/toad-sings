@@ -24,7 +24,8 @@ module.exports = new Map([
       title: 'i\'m currently singing...',
       description: currentState
         ? `[${currentState.song} - ${song.author}](${song.url})`
-        : 'nothing.'
+        : 'nothing.',
+      ...(currentState ? { image: { url: song.thumb } } : {})
     };
   } ],
 
@@ -64,7 +65,7 @@ module.exports = new Map([
       author: { name: 'missed u uwu' },
       title: 'thank u for allowing me to come back ;w;',
       description: `now playing ${oldState.song} by ${song.author}`,
-      image: { url: 'https://cdn.discordapp.com/attachments/521047944636399658/645079349858664456/unknown.png' },
+      image: { url: song.thumb },
       footer: { text: 'cover sang by toad,' }
     };
   } ],
