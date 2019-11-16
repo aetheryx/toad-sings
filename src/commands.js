@@ -135,7 +135,7 @@ module.exports = new Map([
     return {
       title: 'now playing',
       description: `${args} by ${song.author}`,
-      image: { url: 'https://cdn.discordapp.com/attachments/521047944636399658/645079349858664456/unknown.png' },
+      image: { url: song.thumb },
       footer: { text: 'cover sang by toad,' }
     };
   } ]
