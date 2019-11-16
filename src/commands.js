@@ -36,7 +36,7 @@ module.exports = new Map([
       format: 'webm'
     });
 
-    state.setoad(msg.channel.guild.id, {
+    state.set(msg.channel.guild.id, {
       channelID: msg.member.voiceState.channelID,
       song: oldState.song,
     });
@@ -71,7 +71,7 @@ module.exports = new Map([
 
     await client.leaveVoiceChannel(msg.member.voiceState.channelID);
     state.delete(msg.channel.guild.id);
-    history.setoad(msg.channel.guild.id, currentState);
+    history.set(msg.channel.guild.id, currentState);
 
     return {
       description: ':cry: :frowning: :broken_heart:'
@@ -107,7 +107,7 @@ module.exports = new Map([
       format: 'webm'
     });
 
-    state.setoad(msg.channel.guild.id, {
+    state.set(msg.channel.guild.id, {
       channelID: msg.member.voiceState.channelID,
       song: args
     });
