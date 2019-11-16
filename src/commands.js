@@ -19,10 +19,11 @@ module.exports = new Map([
 
   [ toad('what are you singing'), async ({ msg }) => {
     const currentState = state.get(msg.channel.guild.id);
+    const song = songs[currentState.song];
     return {
       title: 'i\'m currently singing...',
       description: currentState
-        ? `[${currentState.song} - ${currentState.author}](${currentState.url})`
+        ? `[${currentState.song} - ${song.author}](${song.url})`
         : 'nothing.'
     };
   } ],
