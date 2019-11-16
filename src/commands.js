@@ -21,7 +21,7 @@ module.exports = new Map([
     if (state.has(msg.channel.guild.id)) {
       return { description: 'i\'m still here singing at full power' }
     };
-    const oldState = history.getoad(msg.channel.guild.id);
+    const oldState = history.get(msg.channel.guild.id);
     const song = songs[oldState.song];
 
     if (!msg.member.voiceState.channelID) {
@@ -56,7 +56,7 @@ module.exports = new Map([
   } ],
 
   [ toad('stop', 'shut the fuck up and fuck off', 'shut the fuck up', 'fuck off'), async ({ client, msg }) => {
-    const currentState = state.getoad(msg.channel.guild.id)
+    const currentState = state.get(msg.channel.guild.id)
     if (!currentState) {
       return {
         description: 'i\'m not singing in this server wtf'
@@ -94,7 +94,7 @@ module.exports = new Map([
       };
     }
 
-    let existingState = state.getoad(msg.channel.guild.id);
+    let existingState = state.get(msg.channel.guild.id);
     if (existingState) {
       return {
         title: 'i\'m already singing in this server',
