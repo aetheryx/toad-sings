@@ -17,11 +17,24 @@ module.exports = new Map([
     footer: { text: 'uwu' }
   }) ],
 
+  [ toad('what are you singing'), async ({ msg }) => {
+    const currentState = state.get(msg.channel.guild.id);
+    return {
+      title: 'i\'m currently singing...',
+      description: currentState
+        ? `[${currentState.song} - ${currentState.author}](${currentState.url})`
+        : 'nothing.'
+    };
+  } ]
+
   [ toad('come back pls'), async ({ client, msg }) => {
     if (state.has(msg.channel.guild.id)) {
       return { description: 'i\'m still here singing at full power' }
     };
     const oldState = history.get(msg.channel.guild.id);
+    if (!oldState) {
+      return { description: 'you need to ask me to fuck off before i can come back' };
+    }
     const song = songs[oldState.song];
 
     if (!msg.member.voiceState.channelID) {
