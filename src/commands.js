@@ -25,7 +25,7 @@ module.exports = new Map([
         ? `[${currentState.song} - ${currentState.author}](${currentState.url})`
         : 'nothing.'
     };
-  } ]
+  } ],
 
   [ toad('come back pls'), async ({ client, msg }) => {
     if (state.has(msg.channel.guild.id)) {
