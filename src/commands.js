@@ -8,13 +8,17 @@ module.exports = new Map([
   [ toad('help'), async () => ({
     author: { name: 'hi there uwu' },
     title: 'my names toad & i like to sing',
-    description: `you can make me sing by joining a voice channel and typing in \`toad sing\` followed by the name of the song, for example \`toad sing hit or miss\`. i'm still in the early stages of my career, so there aren\'t a lot of songs i can sing yet. you can see which songs i can sing by typing \`toad sing\`.\n\nif you're tired of my singing (:cry:) you can make me leave by typing one of:\n-\`toad shut the fuck up and fuck off\`\n-\`toad shut the fuck up\`\n-\`toad fuck off\`\n:frowning:\n\nsome of my other commands are:\n-\`toad what are you singing\`\n-\`toad whats your average packet latency to the discord api gateway websocket connection calculated by taking the mean of the last three packet handshakes\``
+    description: `you can make me sing by joining a voice channel and typing in \`toad sing\` followed by the name of the song, for example \`toad sing hit or miss\`. i'm still in the early stages of my career, so there aren\'t a lot of songs i can sing yet. you can see which songs i can sing by typing \`toad sing\`.\n\nif you're tired of my singing (:cry:) you can make me leave by typing one of:\n-\`toad shut the fuck up and fuck off\`\n-\`toad shut the fuck up\`\n-\`toad fuck off\`\n:frowning:\n\nsome of my other commands are:\n-\`toad what are you singing\`\n-\`toad whats your average packet latency to the discord api gateway websocket connection calculated by taking the mean of the last three packet handshakes\`\n-\`toad come sing for me\``
   }) ],
 
   [ toad('ping', 'whats your average packet latency to the discord api gateway websocket connection calculated by taking the mean of the last three packet handshakes'), async ({ msg }) => ({
     title: '🏓',
     description: ` my average packet latency to the discord api gateway websocket connection calculated by taking the mean of the last three packet handshakes is equal to:\n\n**${msg.channel.guild.shard.latency}** milliseconds`,
     footer: { text: 'uwu' }
+  }) ],
+
+  [ toad('invite', 'come sing for me'), async ({ client }) =>({
+    description: `click [here](https://discord.com/oauth2/authorize?client_id=${client.application.id}&permissions=0&scope=bot 'la la la') and i'll come sing in your server too`
   }) ],
 
   [ toad('what are you singing'), async ({ msg }) => {
