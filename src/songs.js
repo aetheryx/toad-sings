@@ -55,5 +55,19 @@ module.exports = {
     author: 'john denver',
     url: 'https://www.youtube.com/watch?v=x0hYKGotu4I',
     thumb: 'https://i.ytimg.com/vi/x0hYKGotu4I/hqdefault.jpg'
+  },
+
+  'chug jug': {
+    data: readFileSync('./clips/chugjug.opus'),
+    author: 'leviathan',
+    url: 'https://youtu.be/KFViVnGCTJc',
+    thumb: 'http://i3.ytimg.com/vi/KFViVnGCTJc/maxresdefault.jpg'
+  },
+
+  'ra ra rasputin': {
+    data: readFileSync('./clips/rararasputin.opus'),
+    author: 'boney m',
+    url: 'https://youtu.be/KT85z_tGZro',
+    thumb: 'http://i3.ytimg.com/vi/KT85z_tGZro/maxresdefault.jpg'
   }
 };
