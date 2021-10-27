@@ -1,4 +1,6 @@
-module.exports = class BufferStream extends require('stream').Readable {
+const { Readable } = require('stream');
+
+module.exports = class BufferStream extends Readable {
   constructor (buf) {
     super({ autoDestroy: true, emitClose: true });
     this.buf = buf;
